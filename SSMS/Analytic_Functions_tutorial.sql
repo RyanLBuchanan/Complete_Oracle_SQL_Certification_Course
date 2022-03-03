@@ -31,4 +31,6 @@ FROM bricks b;
 
 SELECT b.*,
 (SELECT sum(weight) from bricks where shape = b.shape) total_weight_by_shape
-FROM bricks b;
+FROM bricks b
+order by shape;
+
